@@ -74,7 +74,11 @@ public class GameConfig {
 	return (String) opcoes.get("name");
     }
     
-    public void setNome( String nome ) {
+    public void setNome( String nome ) throws Exception {
+	if( nome.length() > 30 ) {
+	    throw new Exception("Nome não deve ser maior que 30 carecteres!");
+	}
+	
 	opcoes.put("name", nome);
     }
     
@@ -108,37 +112,5 @@ public class GameConfig {
     
     public void setExtraGame( String v ) {
 	getExtra().put("game", v);
-    }
-    
-    public String getExtraVendorId() {
-	return (String) getExtra().get("vendor_id");
-    }
-    
-    public void setExtraVendorId( String v ) {
-	getExtra().put("vendor_id", v);
-    }
-    
-    public String getExtraVendorScope() {
-	return (String) getExtra().get("vendor_scope");
-    }
-    
-    public void setExtraVendorScope( String v ) {
-	getExtra().put("vendor_scope", v);
-    }
-    
-    public String getExtraIdentifier() {
-	return (String) getExtra().get("identifier");
-    }
-    
-    public void setExtraIdentifier( String v ) {
-	getExtra().put("identifier", v);
-    }
-    
-    public String getExtraRegion() {
-	return (String) getExtra().get("region");
-    }
-    
-    public void setExtraRegion( String v ) {
-	getExtra().put("region", v);
     }
 }
