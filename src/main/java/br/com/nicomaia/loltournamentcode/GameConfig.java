@@ -9,13 +9,6 @@ package br.com.nicomaia.loltournamentcode;
 import org.json.simple.JSONObject;
 
 /**
- * Opções do Extra:
- * "game": myowngameid
- * "vendor_id": "27852187"
- * "vendor_scope": "esl_match"
- * "identifier": "esl_match:29383350:3"
- * "region": "na"
- *
  * @author jonimane
  */
 public class GameConfig {
